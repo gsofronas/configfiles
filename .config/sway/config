@@ -54,18 +54,20 @@ output * bg /usr/share/backgrounds/default.jxl fill
 # resumed. It will also lock your screen before your computer goes to sleep.
 
 ### Input configuration
-#
-# Example configuration:
-#
-#   input "2:14:SynPS/2_Synaptics_TouchPad" {
-#       dwt enabled
-#       tap enabled
-#       natural_scroll enabled
-#       middle_emulation enabled
-#   }
-#
-# You can get the names of your inputs by running: swaymsg -t get_inputs
-# Read `man 5 sway-input` for more information about this section.
+input "1267:12811:ELAN06DA:00_04F3:320B_Touchpad" {
+    dwt enabled
+    tap enabled
+    natural_scroll enabled
+    middle_emulation enabled
+    accel_profile flat
+    pointer_accel 0.8
+}
+
+### Support English and Greek
+input * {
+    xkb_layout us,gr
+    xkb_options grp:alt_shift_toggle
+}
 
 ### Key bindings
 #
