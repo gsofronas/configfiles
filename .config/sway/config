@@ -13,8 +13,7 @@ set $term kitty
 
 # Application launcher
 set $rofi_cmd rofi -terminal '$term'
-
-# Spotlight-style launcher, drun only
+# drun only
 set $menu $rofi_cmd -show drun
 
 # Input configuration
