@@ -41,7 +41,12 @@ input * {
 
     # Start launcher
     bindsym $mod+d exec $menu
-    bindsym $mod+space exec $menu
+
+    # Open default web browser (Firefox)
+    bindsym $mod+Shift+b exec firefox
+
+    # Open file manager (Thunar)
+    bindsym $mod+Shift+f exec thunar
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -124,7 +129,7 @@ input * {
     bindsym $mod+Shift+space floating toggle
 
     # Swap focus between the tiling area and the floating area
-    #bindsym $mod+space focus mode_toggle
+    bindsym $mod+space focus mode_toggle
 
     # Move focus to the parent container
     bindsym $mod+a focus parent
@@ -162,6 +167,10 @@ mode "resize" {
     bindsym Escape mode "default"
 }
 bindsym $mod+r mode "resize"
+
+# External monitor on the left, laptop panel on the right
+output DP-3 position 0 0
+output eDP-1 position 2560 0
 
 # Include configs from 3 locations:
 #  - /usr/share/sway/config.d
